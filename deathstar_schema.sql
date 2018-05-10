@@ -80,6 +80,16 @@ FOREIGN KEY (microserviceId)
     REFERENCES Microservices(id)
 );
 
+CREATE TABLE HallOfFame (
+microserviceId int,
+gameId int,
+name VARCHAR(50),
+minutesCompleted int,
+PRIMARY KEY(name),
+FOREIGN KEY (microserviceId)
+    REFERENCES Microservices(id)
+);
+
 CREATE TABLE Logs (
 id int NOT NULL AUTO_INCREMENT,
 time DATETIME NOT NULL DEFAULT NOW(),
